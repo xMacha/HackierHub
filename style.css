@@ -1,85 +1,199 @@
-/* Styl globalny */
+/* Globalne style */
 body {
-  background-color: #121212;
-  color: #ffffff;
-  font-family: 'Arial', sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+a {
+  color: #4a90e2;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #82b1ff;
+}
+
+/* Kontener */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
 }
 
 /* Nawigacja */
 nav {
-  background-color: #1f1f1f;
-  padding: 1em;
+  background: #1f1f1f;
+  padding: 1em 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-nav ul {
-  list-style-type: none;
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .logo a {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #fff;
+}
+nav ul.nav-links {
+  list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
 }
-nav ul li {
-  margin: 0 15px;
+nav ul.nav-links li {
+  margin-left: 1.5em;
 }
-nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1.1em;
-}
-nav ul li a:hover {
-  text-decoration: underline;
+nav ul.nav-links li a {
+  font-size: 1em;
+  font-weight: 500;
+  color: #fff;
 }
 
-/* Header */
-header {
+/* Sekcja hero na stronie głównej */
+.hero {
+  background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+  padding: 4em 1em;
   text-align: center;
-  padding: 2em 1em;
-  background: linear-gradient(45deg, #1e1e1e, #333333);
+}
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+.hero .btn {
+  background: #4a90e2;
+  color: #fff;
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+.hero .btn:hover {
+  background: #357ab8;
 }
 
-/* Sekcje */
-section {
+/* Nagłówek wewnętrzny (dla podstron) */
+.page-title {
+  background: #1f1f1f;
   padding: 2em 1em;
-  max-width: 800px;
-  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.page-title h2 {
+  margin: 0;
+  font-size: 2em;
 }
 
-/* Formularz w sekcji Webhooks */
+/* Sekcja funkcji na stronie głównej */
+.features {
+  padding: 4em 1em;
+  background: #181818;
+}
+.feature {
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+.feature h3 {
+  margin-bottom: 0.5em;
+}
+.feature p {
+  margin-bottom: 1em;
+}
+.btn-secondary {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 0.6em 1.2em;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.btn-secondary:hover {
+  background: #555;
+}
+
+/* Treść główna */
+main .content {
+  padding: 4em 1em;
+}
+main .content h3 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+main .content p {
+  margin-bottom: 1em;
+}
+article.tutorial {
+  background: #1f1f1f;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Formularz na stronie Webhooks */
 form {
-  display: flex;
-  flex-direction: column;
+  background: #1f1f1f;
+  padding: 2em;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin-bottom: 1.5em;
 }
 form label {
+  display: block;
   margin-top: 1em;
+  font-weight: bold;
 }
-input, textarea {
+form input[type="text"],
+form input[type="number"],
+form textarea {
   width: 100%;
-  padding: 0.5em;
+  padding: 0.8em;
   margin-top: 0.5em;
-  background-color: #2e2e2e;
+  background: #2e2e2e;
   border: 1px solid #444;
-  color: #fff;
   border-radius: 4px;
-}
-button {
-  background-color: #4a90e2;
   color: #fff;
+}
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+form button.btn {
+  margin-top: 1.5em;
+  background: #4a90e2;
+  color: #fff;
+  padding: 0.8em 1.5em;
   border: none;
-  padding: 0.7em 1.5em;
-  margin-top: 1em;
-  cursor: pointer;
   border-radius: 4px;
-  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
 }
-button:hover {
-  background-color: #357ab8;
+form button.btn:hover {
+  background: #357ab8;
 }
 
 /* Stopka */
 footer {
+  background: #1f1f1f;
+  padding: 1em 0;
   text-align: center;
-  padding: 1em;
-  background-color: #1f1f1f;
   margin-top: 2em;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+footer p {
+  margin: 0;
+  font-size: 0.9em;
 }
