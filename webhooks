@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HackierHub - Webhooks</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        <h1 class="logo"><a href="index.html">HackierHub</a></h1>
+        <ul class="nav-links">
+          <li><a href="index.html">Strona Główna</a></li>
+          <li><a href="regulamin.html">Regulamin</a></li>
+          <li><a href="tutoriale.html">Tutoriale</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="page-title">
+      <h2>Webhooks</h2>
+    </div>
+  </header>
+  
+  <main>
+    <section class="content">
+      <div class="container">
+        <h3>Wyślij wiadomość na Discorda za pomocą Webhooka</h3>
+        <form id="webhookForm">
+          <label for="webhookUrl">Webhook URL:</label>
+          <input type="text" id="webhookUrl" placeholder="Wprowadź URL webhooka Discorda" required>
+          
+          <label for="message">Wiadomość:</label>
+          <textarea id="message" placeholder="Wpisz treść wiadomości" required></textarea>
+          
+          <label for="spamCount">Liczba wiadomości (spam):</label>
+          <input type="number" id="spamCount" min="1" value="1">
+          
+          <button type="submit" class="btn">Wyślij</button>
+        </form>
+        <div id="response"></div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 HackierHub. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
