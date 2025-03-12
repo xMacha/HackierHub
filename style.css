@@ -17,7 +17,6 @@ a:hover {
   color: #82b1ff;
 }
 
-/* Kontener */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -56,21 +55,30 @@ nav ul.nav-links li a {
   color: #fff;
 }
 
-/* Sekcja hero na stronie głównej */
-.hero {
-  background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
-  padding: 4em 1em;
+/* Strona główna */
+.home-content {
   text-align: center;
+  padding: 4em 1em;
 }
-.hero h2 {
+.home-content h2 {
   font-size: 2.5em;
   margin-bottom: 0.5em;
 }
-.hero p {
+.home-content p {
   font-size: 1.2em;
-  margin-bottom: 1em;
 }
-.hero .btn {
+/* Obrazek z efektem przechylania */
+.tilt-img {
+  width: 300px;
+  transition: transform 0.5s;
+  margin: 1em 0;
+}
+.tilt-img:hover {
+  transform: rotate(10deg);
+}
+
+/* Przyciski */
+.btn {
   background: #4a90e2;
   color: #fff;
   padding: 0.8em 1.5em;
@@ -79,71 +87,46 @@ nav ul.nav-links li a {
   cursor: pointer;
   font-size: 1em;
   transition: background 0.3s;
+  margin-top: 1em;
 }
-.hero .btn:hover {
+.btn:hover {
   background: #357ab8;
 }
-
-/* Nagłówek wewnętrzny (dla podstron) */
-.page-title {
-  background: #1f1f1f;
-  padding: 2em 1em;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-.page-title h2 {
-  margin: 0;
-  font-size: 2em;
-}
-
-/* Sekcja funkcji na stronie głównej */
-.features {
-  padding: 4em 1em;
-  background: #181818;
-}
-.feature {
-  text-align: center;
-  padding: 1em;
-  margin-bottom: 2em;
-}
-.feature h3 {
-  margin-bottom: 0.5em;
-}
-.feature p {
-  margin-bottom: 1em;
-}
 .btn-secondary {
-  display: inline-block;
   background: #333;
   color: #fff;
   padding: 0.6em 1.2em;
   border-radius: 4px;
   transition: background 0.3s;
+  text-decoration: none;
 }
 .btn-secondary:hover {
   background: #555;
 }
 
-/* Treść główna */
-main .content {
-  padding: 4em 1em;
+/* Główna zawartość stron */
+main {
+  padding: 2em 0;
 }
-main .content h3 {
-  font-size: 1.8em;
-  margin-bottom: 0.5em;
-}
-main .content p {
+main h2 {
+  text-align: center;
   margin-bottom: 1em;
 }
-article.tutorial {
-  background: #1f1f1f;
-  padding: 1.5em;
-  margin-bottom: 1.5em;
+.posts, .log-container, .content {
+  background: #181818;
+  padding: 2em;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin-bottom: 2em;
+}
+.posts article.post {
+  margin-bottom: 1.5em;
+}
+.posts article.post h3 {
+  margin-bottom: 0.5em;
 }
 
-/* Formularz na stronie Webhooks */
+/* Formularz w zakładce Webhooks */
 form {
   background: #1f1f1f;
   padding: 2em;
@@ -171,18 +154,15 @@ form textarea {
   resize: vertical;
   min-height: 100px;
 }
-form button.btn {
-  margin-top: 1.5em;
-  background: #4a90e2;
-  color: #fff;
-  padding: 0.8em 1.5em;
-  border: none;
+
+/* Kontener loga */
+.log-container {
+  background: #1f1f1f;
+  padding: 1em;
   border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-form button.btn:hover {
-  background: #357ab8;
+  max-height: 300px;
+  overflow-y: auto;
+  font-family: monospace;
 }
 
 /* Stopka */
